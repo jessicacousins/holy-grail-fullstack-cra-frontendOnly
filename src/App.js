@@ -32,7 +32,7 @@ function App() {
         <Right data={data} handle={handle} />
       </div>
       <Footer data={data} handle={handle} />
-      <Data data={data} />
+      {/* <Data data={data} /> */}
     </div>
   );
 }

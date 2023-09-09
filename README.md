@@ -4,6 +4,10 @@
 
 The HolyGrail full stack project is a web layout built using modern web technologies. Named after the "Holy Grail" layout pattern, it presents a visually appealing and responsive design that consists of five distinct sections: header, left sidebar, main content area, right sidebar, and footer.
 
+## Dependencies
+
+- `npm install express`
+
 ## Roadmap of Future Improvement
 
 Add the backend to the project, improve the look of the classic Holy Grail layout with meaningful content.
