@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Article from "./Article";
+import Footer from "./Footer";
+import Header from "./Header";
+import Left from "./Left";
+import Right from "./Right";
+import PlusMinus from "./PlusMinus";
+import Data from "./Data";
 
 function App() {
+  const [data, setData] = React.useState({
+    header: 0,
+    left: 0,
+    article: 0,
+    right: 0,
+    footer: 0,
+  });
+
+  function handle(section) {
+    const value = data[section.name] + section.value;
+    const object = { [section.name]: value };
+    setData({ ...data, ...object });
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header data={data} handle={handle} />
+      <div className="grid">
+        <Left data={data} handle={handle} />
+        <Article data={data} handle={handle} />
+        <Right data={data} handle={handle} />
+      </div>
+      <Footer data={data} handle={handle} />
+      <Data data={data} />
     </div>
   );
 }
