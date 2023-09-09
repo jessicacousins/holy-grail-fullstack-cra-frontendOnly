@@ -10,6 +10,11 @@ const Footer = (props) => {
         <PlusMinus section="footer" handle={props.handle} />
         <div className="section">Footer:{props.data.footer}</div>
         <Data data={props.data} />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. A nam
+          incidunt quo minus perspiciatis, deleniti dicta sapiente blanditiis
+          sunt quis.
+        </p>
       </footer>
     </>
   );
