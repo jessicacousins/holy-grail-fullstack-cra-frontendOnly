@@ -38,7 +38,7 @@ footer {
 
 body {
   font-family: "Kanit", sans-serif;
-  background: #333;
+  /* background: #000; */
 }
 
 img {
@@ -47,35 +47,42 @@ img {
   padding: 10px;
 }
 
+/* Define neon colors with higher saturation and brightness */
 :root {
-  --box-shadow-hue: 0;
+  --neon-red: hsla(0, 100%, 60%, 0.5); /* Bright neon red */
+  --neon-orange: hsla(30, 100%, 60%, 0.5); /* Bright neon orange */
+  --neon-green: hsla(120, 100%, 60%, 0.5); /* Bright neon green */
+  --neon-cyan: hsla(180, 100%, 60%, 0.5); /* Bright neon cyan */
+  --neon-blue: hsla(240, 100%, 60%, 0.5); /* Bright neon blue */
+  --neon-purple: hsla(300, 100%, 60%, 0.5); /* Bright neon purple */
 }
 
+/* Apply the neon colors to the box shadow */
 header,
 aside,
 article,
 footer {
   animation: neonRainbow 10s infinite linear;
-  box-shadow: 0px 0px 10px hsla(var(--box-shadow-hue), 100%, 50%, 0.5);
+  box-shadow: 0px 0px 50px var(--box-shadow-color);
 }
 
 @keyframes neonRainbow {
   0% {
-    --box-shadow-hue: 0; /* Red */
+    --box-shadow-color: var(--neon-red);
   }
   20% {
-    --box-shadow-hue: 60; /* Orange */
+    --box-shadow-color: var(--neon-orange);
   }
   40% {
-    --box-shadow-hue: 120; /* Green */
+    --box-shadow-color: var(--neon-green);
   }
   60% {
-    --box-shadow-hue: 180; /* Cyan */
+    --box-shadow-color: var(--neon-cyan);
   }
   80% {
-    --box-shadow-hue: 240; /* Blue */
+    --box-shadow-color: var(--neon-blue);
   }
   100% {
-    --box-shadow-hue: 300; /* Purple */
+    --box-shadow-color: var(--neon-purple);
   }
 }
