@@ -5,8 +5,8 @@
 The HolyGrail full stack project is a web layout built using modern web technologies. Named after the "Holy Grail" layout pattern, it presents a visually appealing and responsive design that consists of five distinct sections: header, left sidebar, main content area, right sidebar, and footer.
 
 ## Dependencies
-
-- `npm install express`
+(note: both React and Express are currently on port 3000)
+- `npm install express` then `node index.js` to spin port 3000 up for the server
 
 ## Roadmap of Future Improvement
 
